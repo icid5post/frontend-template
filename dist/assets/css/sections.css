@@ -1,0 +1,134 @@
+.rk-section-bg {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 100%);
+  position: relative;
+}
+
+.adv-section {
+  margin-bottom: 50px;
+}
+
+.adv-section__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 390px;
+}
+
+.adv-section__img img {
+  max-width: 100%;
+}
+
+.adv-title {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.adv-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.adv-item__img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.adv-item__img img {
+  max-width: 100%;
+}
+
+.adv-item__title {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.adv-item__desc {
+  color: #818181;
+}
+
+.rk-card {
+  padding: 120px 100px;
+  color: #fff;
+  border-radius: 100px;
+  margin-bottom: 100px;
+}
+
+.rk-card__title {
+  font-weight: 600;
+  font-size: 43px;
+  margin-bottom: 80px;
+}
+
+.rk-step-item {
+  padding-left: 50px;
+}
+
+.rk-step-item__title {
+  font-size: 26px;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+
+.rk-step-item__title span {
+  font-size: 50px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.rk-ac-item {
+  margin-bottom: 30px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  padding: 20px 0;
+}
+
+.rk-ac-item__title {
+  display: block;
+  background-color: transparent;
+  border: 0;
+  font-size: 26px;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  position: relative;
+}
+
+.rk-ac-item__title .pls {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-left: -15px;
+  width: 30px;
+  height: 16px;
+}
+
+.rk-ac-item__title .pls:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #000;
+}
+
+.rk-ac-item__title .pls:before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: 4px;
+  height: 10px;
+  width: 2px;
+  background-color: transparent;
+}
+
+.rk-ac-item__title.collapsed .pls:before {
+  background-color: #000;
+}
+
+.rk-ac-item__content {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=maps/sections.css.map */

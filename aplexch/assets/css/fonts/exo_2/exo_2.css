@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'exo';
+    src: url('./static/Exo2-Regular.ttf');
+    src: url('../font/fontello.eot?16056325#iefix') format('embedded-opentype'),
+    url('../font/fontello.woff2?16056325') format('woff2'),
+    url('../font/fontello.woff?16056325') format('woff'),
+    url('../font/fontello.ttf?16056325') format('truetype'),
+    url('../font/fontello.svg?16056325#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrom

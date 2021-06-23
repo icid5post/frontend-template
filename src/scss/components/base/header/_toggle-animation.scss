@@ -1,0 +1,97 @@
+
+.rk-header-menu-tgl{
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  width: 34px;
+  justify-content: space-between;
+  @each $key in (md, lg, xl, sm, xs) {
+    @include media-breakpoint-up($key) {
+      margin-right: map-get($header-items-offset, $key);
+    }
+  }
+  align-items: flex-start;
+  .tgl-bar{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #201F1E;
+    animation-duration: 2s;
+    transition: all ease-in-out 0.3s;
+    transform-origin: 50% 50%;
+    &_third{
+      width: 65%;
+    }
+  }
+
+  &.active{
+    .tgl-bar{
+
+    }
+    .tgl-bar_first{
+        transform: rotate(45deg) translate(0px, 0px);
+        background-color: lighten($color-primary, 10%);;
+    }
+    .tgl-bar_seccond{
+      transform: rotate(-45deg) translate(6px, -6px);
+      background-color: $color-primary;
+    }
+
+    .tgl-bar_third{
+      width: 100%;
+      background-color: $color-primary;
+    }
+  }
+
+}
+
+@keyframes TOP_BAR_ANIMATION {
+  0%,
+  30% {
+    transform: rotate(0deg) translate(0);
+  }
+  35% {
+    transform: rotate(-5deg);
+  }
+  65% {
+    transform: rotate(50deg) translate(12px, 8px);
+  }
+  70%,
+  100% {
+    transform: rotate(45deg) translate(12px, 8px);
+  }
+}
+
+@keyframes MIDDLE_BAR_ANIMATION {
+  0%,
+  30% {
+    transform: rotate(0deg) translate(0);
+  }
+  35% {
+    transform: rotate(5deg) translate(0);
+  }
+  65% {
+    transform: rotate(-50deg) translate(6px, -6px);
+  }
+  70%,
+  100% {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+@keyframes BOTTOM_BAR_ANIMATION {
+  0%,
+  30% {
+    transform: translateY(0px);
+  }
+  35% {
+    transform: translateY(-5px);
+  }
+  65% {
+    transform: translateY(37px);
+  }
+  70%,
+  100% {
+    transform: translateY(32px);
+  }
+}

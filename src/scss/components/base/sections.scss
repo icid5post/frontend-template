@@ -1,0 +1,20 @@
+.rk-section{
+  @each $key in (md, lg, xl, sm, xs) {
+    @include media-breakpoint-up($key) {
+      padding-top: map-get($header-height, $key);
+    }
+  }
+}
+
+.rk-prev-section{
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    background: linear-gradient(38.36deg, #0A7F2E 0%, #000000 181.17%);
+    height: 100%;
+  }
+}

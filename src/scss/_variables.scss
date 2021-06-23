@@ -1,0 +1,27 @@
+
+/* Fonts */
+
+$font-family : 'Helvetica Neue', sans-serif;
+$font-family-alt : sans-serif;
+$font-family-fontello: "fontello";
+$font-size : 1rem;
+$font-weight : normal;
+$letter-spacing : normal;
+$line-height : 1.2;
+
+
+:root{
+  --default-color: #F0F0F0;
+  --primary-color: #0052FF;
+}
+
+
+// Theme style
+
+$success: #40C269;
+
+$theme-colors: (
+    "primary": #0052FF,
+    "success": #40C269,
+    "secondary": #F0F0F0
+);
