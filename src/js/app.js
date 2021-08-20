@@ -1,21 +1,15 @@
 import $ from 'jquery';
-
 import 'lazysizes';
-import 'bootstrap';
-import Sticky from 'sticky-js';
+import 'bootstrap/dist/js/bootstrap.bundle';
 import page from 'page';
 import forms from 'forms';
 import siteMenu from './menu';
-import * as Pageable from 'pageable';
 import feather from 'feather-icons/dist/feather';
-import AOS from 'aos';
-import mCustomScrollbar from 'malihu-custom-scrollbar-plugin'
-import mousewheel from 'jquery-mousewheel';
+
 
 let app = {
 
     // параметры, изменяемые в appConfig
-
     breakpoints: {
         sm: 320,
         md: 768,
@@ -32,7 +26,9 @@ let app = {
     scrollToSpeed: 500, // скорость скролла
 
     init: function () {
+
         // read config
+
         if (typeof appConfig === 'object') {
             Object.keys(appConfig).forEach(key => {
                 if (Object.prototype.hasOwnProperty.call(app, key)) {
@@ -47,7 +43,7 @@ let app = {
         this.page = page;
         this.page.init.call(this);
 
-        // Init page
+        // Init forms
         this.forms = forms;
         this.forms.init.call(this);
 
@@ -56,23 +52,25 @@ let app = {
         this.menu.init.call(this);
 
         app.checkMedia();
+
         app.window.on('resize', app.checkMedia);
+
         window.jQuery = $;
         window.app = app;
 
         app.document.ready(() => {
             this.initScrollTo(); // for example
-            feather.replace();
 
+            feather.replace();
         });
 
         app.window.on('load', () => {
-            this.setAnimation();
-            console.log($(this))
+            console.log($(this));
         });
 
-        // this.document.on(app.resizeEventName, () => {
-        // });
+        this.document.on(app.resizeEventName, () => {
+
+        });
 
     },
 
@@ -90,48 +88,9 @@ let app = {
         });
 
 
-        $(".rk-hr-srolling").mCustomScrollbar({
-            axis:"x",
-            advanced:{autoExpandHorizontalScroll:true}
-        });
-
-        $(".demo-x").mCustomScrollbar({
-            axis:"x",
-            advanced:{autoExpandHorizontalScroll:true}
-        });
-
-        $('.rk-hr-srolling').mousewheel(function(event) {
-            console.log(event.deltaX, event.deltaY, event.deltaFactor);
-        });
-
     },
 
-    setAnimation() {
-        $('.rk-header-anim').addClass('anim');
 
-        // sticky
-        if(app.media >= 768){
-            var sticky = new Sticky('#sticky-prev');
-
-        }
-
-
-        // option elem
-        let opttionStep = $('.rk-trade-opt');
-
-        $('.rk-opt-item').click(function (e) {
-            e.stopPropagation();
-            let nexOpt = $(this).attr('data-scrollto')
-            $('html,body').animate({scrollTop: $(`.${nexOpt}`).offset().top+"px" }, {duration:1E3});
-        })
-
-
-
-
-        // side fade in
-        AOS.init();
-
-    },
 
     /**
      * Проверяет размер окна и пишет его в app.media

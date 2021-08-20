@@ -1,6 +1,7 @@
 block config
-
+    
 doctype html
+
 html(lang=__.lang, class="no-js")
     head
         block head
@@ -9,25 +10,24 @@ html(lang=__.lang, class="no-js")
             block styles
                 link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
     body.body(class=bodyClass)
-        include mixins/svgsprite
-        
-        block header
-            include blocks/header
-
-        .content
-            block content
-
-        
-        .hidden
-            // include popups here
-        
-        include blocks/footer
+        .page-wrapper
+            include mixins/svgsprite
+            
+            block header
+                include blocks/header
+    
+            .rk-content
+                block content
+            
+            include blocks/footer
+                
+            .hidden
+                // include popups here
 
         block scripts
             include scripts
         block scripts-config
             script.
-                // feather.replace()
                 /* изменяемые настройки скриптов, указаны значения по умолчанию */
                 var appConfig = {
                     /*

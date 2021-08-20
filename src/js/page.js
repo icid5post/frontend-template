@@ -17,6 +17,9 @@ let page = {
         app.browser = browser();
         app.mobile = app.browser.mobile;
         app.html.removeClass('no-js').addClass(app.mobile ? 'mobile' : 'desktop').addClass(app.browser.name);
+
+        $('.rk-hidden').removeClass('d-none');
+
         if (app.browser.os.indexOf('OS') === 0 || app.browser.os.indexOf('iOS') === 0) {
             app.html.addClass('huapple');
         }
@@ -30,9 +33,9 @@ let page = {
 //        if (app.mobile) {
 //            FastClick.attach(document.body);
 //        }
-        
+
     }
-    
+
 };
 
 export default page;

@@ -1,12 +1,14 @@
-
-
-
-@media (min-width: 1200px){
-  .container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1570px;
-  }
+html,
+body{
+    height: 100%;
 }
 
-a:hover{
-  color: #000;
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.rk-content{
+    flex-grow: 1;
 }

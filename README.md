@@ -1,8 +1,3 @@
-### Быстрый старт
-`yarn dev`
-`yarn build`
-`yarn validate-html`
-`yarn jslint`
 
 # Frontend starter pack (Pug + SCSS)
 
@@ -12,26 +7,8 @@
 * использование транспайлера [Babel](https://babeljs.io/) для поддержки современного JavaScript (ES6) в браузерах.
 
 ## Установка
-Установите [Yarn](https://yarnpkg.com/en/docs/install).
 
-> Yarn - это современная альтернатива npm. Yarn работает с тем же файлом `package.json` и так же скачивает необходимые модули в папку `node_modules`, но делает это намного быстрее.
-
-* скачайте сборку: `git clone http://148.251.115.93/kirusanov/frontend-pack.git`;
-* установите `gulp` глобально: `yarn global add gulp-cli`;
-* перейдите в скачанную папку со сборкой: `cd frontend-pack`;
-* введите команду, которая скачает необходимые компоненты для корректной работы нашей сборки, указанные в файле `package.json`: `yarn`;
-* введите команду: `yarn dev` (режим разработки);
-* чтобы «собрать» проект, введите команду `yarn build`.
-
-Если вы всё сделали правильно, у вас должен открыться браузер с локальным сервером и работающим `browser-sync`.
-
-## Предустановленные пакеты
-Удалите ненужные
-* [fancybox](http://fancyapps.com/fancybox/3/)
-* [inputmask](https://github.com/RobinHerbots/Inputmask)
-* [jquery](https://api.jquery.com/)
-* [lazysizes](https://github.com/aFarkas/lazysizes)
-* [swiper](https://swiperjs.com/)
+`npm install` 
 
 ## Плагины
 * [gulp-if](https://www.npmjs.com/package/gulp-if) - запуск заданий только тогда, когда это нужно;
@@ -55,10 +32,10 @@
 * [yargs](https://www.npmjs.com/package/yargs) - получение аргументов командной строки в Node.js.
 
 ### Сборка проекта в режиме разработки
-`yarn run dev`
+`npm run dev`
 
 ## Окончательная сборка
-`yarn run build`
+`npm run build`
 
 ### Структура каталогов
 ```
