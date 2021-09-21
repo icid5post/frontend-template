@@ -13,3 +13,19 @@
 // BLocks
 @import "components/blocks/header";
 @import "components/blocks/footer";
+
+
+// Components
+@import "components/RightBlock";
+@import "components/week";
+@import "components/nearest";
+@import "components/map";
+
+
+.home-prev{
+    > .col {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+    }
+}

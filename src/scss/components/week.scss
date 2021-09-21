@@ -1,0 +1,90 @@
+
+.week{
+    padding: 25px 30px;
+    background: #F78721;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    .time {
+        font-size: 38px;
+        line-height: 45px;
+    }
+
+    .date,
+    .time{
+        margin-bottom: 10px;
+    }
+
+    .wave{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .content{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+        margin-bottom: 20px;
+    }
+
+    .current-weather{
+        margin-bottom: 10px;
+    }
+
+    .current-day{
+        font-size: 80px;
+        font-weight: bold;
+        word-spacing: -30px;
+        line-height: 100px;
+        display: inline-block;
+        position: relative;
+        > span{
+            top: -15px;
+            display: inline-block;
+            position: absolute;
+            right: -30px;
+        }
+    }
+
+}
+
+
+
+
+
+.forecast{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    &-item{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: inset 2px 2px 11px #FFFFFF;
+        border-radius: 11px;
+        color: #333030;
+        padding: 10px;
+        flex-grow: 1;
+        margin: 0 10px;
+        .icon {
+            margin-bottom: 10px;
+            svg path{
+                fill: #F38E17;
+            }
+        }
+        .temperature{
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .forecast-day{
+            font-size: 12px;
+        }
+    }
+}

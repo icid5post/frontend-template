@@ -1,0 +1,56 @@
+#mapBlock
+
+script.
+    function initMap(lon, lat){
+        map = new OpenLayers.Map("mapBlock");
+        map.addLayer(new OpenLayers.Layer.OSM());
+        
+        var lineLayer = new OpenLayers.Layer.Vector("Line Layer");
+        map.addLayer(lineLayer);
+    
+        let lonLat = new OpenLayers.LonLat(lon, lat)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                map.getProjectionObject() // to Spherical Mercator Projection
+            );
+
+        let zoom = 18;
+
+        let markers = new OpenLayers.Layer.Markers("Markers");
+        var size = new OpenLayers.Size(30, 55); 
+        var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
+        let carIcon = new OpenLayers.Icon('assets/img/carMarker.png',size, offset);
+        
+        map.addLayer(markers);
+        
+        var marker = new OpenLayers.Marker(lonLat, carIcon)
+        markers.addMarker(marker);
+
+        map.setCenter(lonLat, zoom);
+        
+        
+  
+        var lon = 69.291406
+       var lat = 40.235469
+        
+        setInterval(() => {
+            markers.removeMarker(marker);
+            let lonLat = new OpenLayers.LonLat(lon, lat)
+                .transform(
+                    new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                    map.getProjectionObject() // to Spherical Mercator Projection
+                );
+            markers.addMarker(new OpenLayers.Marker(lonLat, carIcon));
+            map.setCenter(lonLat, zoom);
+
+            lon += 0.000010000000003174137
+            lat += 0.000010000000003174137
+            
+        }, 1000)
+      
+    }
+    
+    document.addEventListener("DOMContentLoaded", function (event) {
+        initMap(69.291406, 40.235469)
+    });
+    

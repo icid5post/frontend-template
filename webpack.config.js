@@ -14,19 +14,6 @@ const webpackConfig = {
 
     module: {
         rules: [
-            // Не смог сделать, чтоб показывал ошибки, но собирал дальше
-//            {
-//                enforce: 'pre',
-//                test: /\.js$/,
-//                exclude: /(node_modules|bower_components|libs)/,
-//                loader: 'eslint-loader',
-//                options: {
-//                    emitError: false,
-//                    emitWarning: false,
-//                    failOnError: false,
-//                    failOnWarning: false,
-//                },
-//            },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
@@ -61,6 +48,7 @@ if (!global.isDev) {
                 drop_console: false,
                 ie8: false,
                 unsafe: true,
+                ecma: 8,
                 output: {
                     comments: false
                 }

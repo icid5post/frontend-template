@@ -1,8 +1,67 @@
 extends _includes/layout
 block content
-    .container
-    
     .container-fluid
+        .home-prev
+            .row
+                .col-lg-6.flex-grow-1.d-flex.flex-column
+                    include _includes/components/map
+                .col-lg-6.flex-grow-1.d-flex.flex-column
+                    include _includes/components/homeRight  
+        .nearest
+            .row.align-items-center
+                .col-lg-6
+                    .nearest-title
+                        .title Nearest arrival in:
+                        .time 8 min | 15 min
+                .col-lg-6
+                    .nearest-busstop Navoi avenue
+                        .arrow
+                            <svg width="54" height="22" viewBox="0 0 54 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M43 0.333336V8.33334H0.333313V13.6667H43V21.6667L53.6666 11L43 0.333336Z" fill="white"/>
+                            </svg>
+                        | Central street
+        //
+            .nearest
+                .row.align-items-center
+                    .col-lg-6
+                        .nearest-title
+                            .title.text-primary Nearest arrival in:
+                            .time 8 min | 15 min
+                    .col-lg-6
+                        .nearest-busstop.text-primary Navoi avenue
+                            .arrow
+                                <svg width="54" height="22" viewBox="0 0 54 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M43 0.333336V8.33334H0.333313V13.6667H43V21.6667L53.6666 11L43 0.333336Z" fill="white"/>
+                                </svg>
+                            | Central street
+            .nearest.bg-success
+                .row.align-items-center
+                    .col-lg-6
+                        .nearest-title
+                            .title Nearest arrival in:
+                            .time.text-lg 8 min | 15 min
+                    .col-lg-6
+                        .nearest-busstop Navoi avenue
+                            .arrow
+                                <svg width="54" height="22" viewBox="0 0 54 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M43 0.333336V8.33334H0.333313V13.6667H43V21.6667L53.6666 11L43 0.333336Z" fill="white"/>
+                                </svg>
+                            | Central street
+            .nearest
+                .row.align-items-center
+                    .col-lg-6
+                        .nearest-title
+                            .title Nearest arrival in:
+                            .time.text-contained.text-lg 8 min | 15 min
+                    .col-lg-6
+                        .nearest-busstop.text-primary Navoi avenue
+                            .arrow
+                                <svg width="54" height="22" viewBox="0 0 54 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M43 0.333336V8.33334H0.333313V13.6667H43V21.6667L53.6666 11L43 0.333336Z" fill="white"/>
+                                </svg>
+                            | Central street
+                    
+            
 
 
 

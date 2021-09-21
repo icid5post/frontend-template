@@ -9,6 +9,11 @@ html(lang=__.lang, class="no-js")
 
             block styles
                 link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
+                link(rel="preconnect" href="https://fonts.googleapis.com")
+                link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+                link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet")
+            block scripts
+                include scripts
     body.body(class=bodyClass)
         .page-wrapper
             include mixins/svgsprite
@@ -19,13 +24,11 @@ html(lang=__.lang, class="no-js")
             .rk-content
                 block content
             
-            include blocks/footer
-                
+        
             .hidden
                 // include popups here
 
-        block scripts
-            include scripts
+      
         block scripts-config
             script.
                 /* изменяемые настройки скриптов, указаны значения по умолчанию */

@@ -2,8 +2,6 @@ import $ from 'jquery';
 import 'lazysizes';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import page from 'page';
-import forms from 'forms';
-import siteMenu from './menu';
 import feather from 'feather-icons/dist/feather';
 
 
@@ -43,13 +41,10 @@ let app = {
         this.page = page;
         this.page.init.call(this);
 
-        // Init forms
-        this.forms = forms;
-        this.forms.init.call(this);
 
-        //Site menu
-        this.menu = siteMenu;
-        this.menu.init.call(this);
+        //Init map
+        // this.map = map;
+        // this.map.init.call(this);
 
         app.checkMedia();
 
@@ -60,7 +55,6 @@ let app = {
 
         app.document.ready(() => {
             this.initScrollTo(); // for example
-
             feather.replace();
         });
 
